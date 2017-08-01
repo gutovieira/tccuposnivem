@@ -3,7 +3,6 @@
 include("./class/db_connect.php");
 
 ob_start();
-if(!isset($_SESSION))
     session_start();
 ob_end_clean();
 
@@ -14,7 +13,8 @@ if (((@$_SESSION['status_login']) == 'logado') && ((@$_SESSION['us_tipo']) != 'E
 
     if ((!isset($_GET['usuario'])) || (!isset($_GET['proposta']))){
         
-            header("Location: index.php?p=listaProposta");
+            echo "<script>location.href='index.php?p=listaProposta';</script>";
+            //header("Location: index.php?p=listaProposta");
 
         //location.href='index.php?p=listaProposta';</script>";
     }
@@ -47,12 +47,12 @@ if (((@$_SESSION['status_login']) == 'logado') && ((@$_SESSION['us_tipo']) != 'E
         if ($total > 0){
             $erro[] = "Você já aceitou este projeto.";
             
-            echo @$erro[0];
+            //echo @$erro[0];
 
         }
 
         else if ($total == 0){
-            echo "<script> alert('Estamos registrando seu aceite... Clique OK para continuar');</script>";
+            //echo "<script> alert('Estamos registrando seu aceite... Clique OK para continuar');</script>";
 
 
         // Registro do aceite na tabela tb_aceita do banco de dados.
@@ -103,23 +103,23 @@ if (((@$_SESSION['status_login']) == 'logado') && ((@$_SESSION['us_tipo']) != 'E
                         $insere3 = $mysqli->query($sql_code3) or die($mysqli->error);
                     
                         if (@$insere3){
-                            echo "<script>alert('Status do projeto atualizado com sucesso!')</script>";
-                            header("location: resultadoaceite.php?r=pass");
+                            echo "<script>alert('Status do projeto atualizado com sucesso!'); location.href='resultadoaceite.php?r=pass';</script>";
+                            //header("location: resultadoaceite.php?r=pass");
                         }
                         else{
-                            echo "<script>alert('Falha ao atualizar o status do projeto para DESENVOLVIMENTO!')</script>";
-                            header("location: resultadoaceite.php?r=error");
+                            echo "<script>alert('Falha ao atualizar o status do projeto para DESENVOLVIMENTO!'); location.href='resultadoaceite.php?r=error';</script>";
+                            //header("location: resultadoaceite.php?r=error");
                         }                    
                     }
                 }
                 else{
-                    echo "<script>alert('Status do projeto atualizado com sucesso!')</script>";
-                    header("location: resultadoaceite.php?r=pass");
+                    echo "<script>alert('Status do projeto atualizado com sucesso!'); location.href='resultadoaceite.php?r=pass';</script>";
+                    //header("location: resultadoaceite.php?r=pass");
                 }
             } 
             else {
-                    echo "<script>alert('Ocorreu um erro, tente aceitar novamente!')</script>";
-                    header("location: resultadoaceite.php?r=error");
+                    echo "<script>alert('Ocorreu um erro, tente aceitar novamente!'); location.href='resultadoaceite.php?r=error';</script>";
+                    //header("location: resultadoaceite.php?r=error");
                 // se o registro NÃO for inserido no banco com sucesso, redireciona para a página de erro
                 //header("Location: finalizado.php?r=error");
                 //echo "<script> location.href='finalizado.php?r=error'; </script>";
@@ -142,30 +142,31 @@ else{
 <html>
     <head>
 
-        <meta charset="utf-8">
-        <!-- If IE use the latest rendering engine -->
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <!-- Set the page to the width of the device and set the zoom level -->
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta charset="utf-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
 
-        <title>Meu TCC</title>
+    <title>Sociversidade - TCC UNIVEM</title>
 
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
 
 
 
-    <! Inicio teste do StartBootstrap!>
+<! Inicio teste do StartBootstrap!>
+    <!-- Custom CSS -->
+    <link href="./css/tcc1.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="css/tcc1.css" rel="stylesheet">
-            <!-- Custom CSS -->
-        <link href="css/tcc3.css" rel="stylesheet">
-        <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <!// Fim teste do StartBootstrap !>
+    <link href="./css/tcc3.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<!// Fim teste do StartBootstrap !>
 
-
+    </head>
+    <body>
 
 <?php
     include("header.php");      
@@ -175,6 +176,18 @@ else{
     </head>
     <body>
 
-<?php
-    include("footer.php");      
-?>
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/docs.min.js"></script>
+
+<?php 
+
+    include("footer.php");
+
+ ?>
+    
+</body>
+</html>

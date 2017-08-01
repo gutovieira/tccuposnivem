@@ -111,8 +111,9 @@ if ((@$_SESSION['status_login']) == 'logado'){
 
 
 else{
-    echo "<script>alert('Para acessar esta página você precisa estar logado. Clique em OK e você será redirecionado a página de login!'); </script>";
-    header("Location: login.php");
+    echo "<script>alert('Para acessar esta página você precisa estar logado. Clique em OK e você será redirecionado a página de login!'); location.href='login.php';</script>";
+    
+    //header("Location: login.php");
 
     //location.href='login.php';</script>";
 }
@@ -503,24 +504,3 @@ else{
     <!-- /.container -->
 </section>
 
-<!-- Backup da formatação inicial do post de proposta
-
-                <p><h2 class="text-info" ><?php //echo $saida['proposta_titulo']; ?></h2></p>
-                <p><h4 class="text-muted">
-                    Publicado por <i class="text-primary"><?php //echo @$saida3["entidade_nome"]; ?></i>
-                </h4></p>
-                <p class="text-muted"><span class="glyphicon glyphicon-time text-muted"></span> postado em <?php //echo @$data_formatada; ?></p>
-                <hr class="small" align="left">
-                <p class="text-justify text-info"><?php //echo nl2br($saida['proposta_resumo']); ?></p>
-                <br>
-                <a class="btn btn-success btn-sm" href="#">Read More <i class="caret"></i></a>
-                <hr><br>            
--->
-
-
-<!--    <div class="row">
-            <div class="col-lg-12 text-center">
-                <p class="lead"><h4><a href="index.php">Clique aqui para voltar</a> ou <a href="logout.php">clique aqui para sair</a></h4></p>
-            </div>
-        </div>
--->
