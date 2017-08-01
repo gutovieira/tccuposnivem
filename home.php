@@ -55,7 +55,7 @@
                                 <strong>uma Entidade</strong><br><br>
                             </h4>
                             <p class="lead">e tem uma proposta de projeto que gostaria que fosse desenvolvida por alunos da UNIVEM</p><br>
-                            <a href="login.php" class="btn btn-info">clique aqui para publicá-la</a>
+                            <a href="index.php?p=listaProposta" class="btn btn-info">clique aqui para publicá-la</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-8">
@@ -68,7 +68,7 @@
                                 <strong>um Aluno</strong><br><br>
                             </h4>
                             <p class="lead">e gostaria de desenvolver uma dos projetos publicados pelas instituições do terceiro setor parceiras da UNIVEM</p><br>
-                            <a href="login.php" class="btn btn-warning">clique aqui para participar</a>
+                            <a href="index.php?p=listaProposta" class="btn btn-warning">clique aqui para participar</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-8">
@@ -81,7 +81,7 @@
                                 <strong>um Professor</strong><br><br>
                             </h4>
                             <p class="lead">e deseja orientar o desenvolvimento de projetos publicados pelas entidades do terceiro setor.</p><br>
-                            <a href="login.php" class="btn btn-success">clique aqui e saiba mais</a>
+                            <a href="index.php?p=listaProposta" class="btn btn-success">clique aqui e saiba mais</a>
                         </div>
                     </div>
                 </div>

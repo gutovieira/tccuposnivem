@@ -39,7 +39,7 @@
     include("header.php");		
 ?>
 
-    <section id="finalizado" class="about">
+    <section id="finalizado" class="services">
         <div class="container">
             <div class="row">
 

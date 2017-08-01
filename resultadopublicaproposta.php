@@ -57,7 +57,7 @@ if (((@$_SESSION['status_login']) == 'logado') && ((@$_SESSION['us_tipo']) == 'E
     include("header.php");      
 ?>
 
-    <section id="finalizado" class="about">
+    <section id="finalizado" class="services">
         <div class="container">
             <div class="row">
 
