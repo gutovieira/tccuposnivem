@@ -162,28 +162,28 @@ else{
 <html>
     <head>
 
-        <meta charset="utf-8">
-        <!-- If IE use the latest rendering engine -->
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <!-- Set the page to the width of the device and set the zoom level -->
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta charset="utf-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
 
-        <title>Meu TCC</title>
+    <title>Sociversidade - TCC UNIVEM</title>
 
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
 
 
 
-    <!-- Inicio links para o reutilizar as folhas do StartBootstrap-->
+<! Inicio teste do StartBootstrap!>
+    <!-- Custom CSS -->
+    <link href="./css/tcc1.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="css/tcc1.css" rel="stylesheet">
-            <!-- Custom CSS -->
-        <link href="css/tcc3.css" rel="stylesheet">
-        <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <!-- Fim do StartBootstrap -->
+    <link href="./css/tcc3.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<!// Fim teste do StartBootstrap !>
 
 
     </head>
@@ -281,15 +281,18 @@ else{
     <!-- /.container -->
 </section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/docs.min.js"></script>
 
 <?php 
 
     include("footer.php");
 
  ?>
+    
+</body>
+</html>
